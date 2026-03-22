@@ -17,9 +17,27 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae explicabo, nihil aliquid culpa porro saepe!
         Incidunt at accusantium maiores consectetur esse, quidem, adipisci nemo iure, magni recusandae sequi sunt
         labore!</p>
+
+    <iframe name="Player" src="https://redecanaistv.ooo/player3/ch.php?canal=espn" allow="encrypted-media"
+        allowfullscreen></iframe>
+
+    <iframe name="Player" src="https://redecanaistv.ooo/player3/ch.php?canal=espn2" allow="encrypted-media"
+        allowfullscreen></iframe>
+
     <iframe name="Player" src="https://redecanaistv.ooo/player3/ch.php?canal=espn3" allow="encrypted-media"
         allowfullscreen></iframe>
 
+
+    <iframe name="Player" src="https://redecanaistv.ooo/player3/ch.php?canal=espn4" allow="encrypted-media"
+        allowfullscreen></iframe>
+
+        
+    <iframe name="Player" src="https://redecanaistv.ooo/player3/ch.php?canal=espn5" allow="encrypted-media"
+        allowfullscreen></iframe>
+
+        
+    <iframe name="Player" src="https://redecanaistv.ooo/player3/ch.php?canal=espn6" allow="encrypted-media"
+        allowfullscreen></iframe>
 
 
     <nav class="navbar navbar-dark bg-black border-bottom border-secondary mb-4">
@@ -34,11 +52,21 @@
             <div class="col-6 col-md-4 col-lg-3">
                 <button class="btn canal-btn w-100 p-3 d-flex flex-column align-items-center"
                     onclick="abrirCanal('espn3', 'ESPN 3')">
-                    <img src="/img/ESPN3_logo.svg"
-                        class="canal-logo" alt="ESPN 3">
+                    <img src="/img/ESPN3_logo.svg" class="canal-logo" alt="ESPN 3">
+                    <span class="fw-bold text-white">ESPN 3</span>
+                    <iframe name="Player" src="https://redecanaistv.ooo/player3/ch.php?canal=espn3"
+                        allow="encrypted-media" allowfullscreen></iframe>
+                </button>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <button class="btn canal-btn w-100 p-3 d-flex flex-column align-items-center"
+                    onclick="abrirCanal('espn3', 'ESPN 3')">
+                    <img src="/img/ESPN3_logo.svg" class="canal-logo" alt="ESPN 3">
                     <span class="fw-bold text-white">ESPN 3</span>
                 </button>
             </div>
+
 
             <div class="col-6 col-md-4 col-lg-3">
                 <button class="btn canal-btn w-100 p-3 d-flex flex-column align-items-center"
@@ -92,13 +120,13 @@
         function abrirCanal(idCanal, nomeCanal) {
             // 1. Muda o título da barrinha do player
             document.getElementById('nomeDoCanal').innerText = "Assistindo: " + nomeCanal;
-            
+
             // 2. Constrói o link direto daquele canal específico
             const linkDireto = "https://redecanaistv.ooo/player3/ch.php?canal=" + idCanal;
-            
+
             // 3. Coloca o link dentro do iframe
             document.getElementById('telaDoPlayer').src = linkDireto;
-            
+
             // 4. Mostra o player na tela
             modalPlayer.show();
         }
